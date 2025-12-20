@@ -12,11 +12,9 @@
  - [iw](https://wireless.wiki.kernel.org/en/users/documentation/iw).
 # Setup
 
- ```
 ## [Termux](https://termux.com/)
 Please note that root access is required.  
 
- ```
 #### Manually
 **Installing requirements**
  ```
