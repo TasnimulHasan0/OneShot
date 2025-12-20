@@ -1,4 +1,3 @@
-
 # Overview
 **OneShot** performs [Pixie Dust attack](https://forums.kali.org/showthread.php?24286-WPS-Pixie-Dust-Attack-Offline-WPS-Attack) without having to switch to monitor mode.
 # Features
@@ -12,83 +11,25 @@
  - [Pixiewps](https://github.com/wiire-a/pixiewps);
  - [iw](https://wireless.wiki.kernel.org/en/users/documentation/iw).
 # Setup
-## Debian/Ubuntu
-**Installing requirements**
- ```
- sudo apt install -y python3 wpasupplicant iw wget
- ```
-**Installing Pixiewps**
 
-***Ubuntu 18.04 and above or Debian 10 and above***
- ```
- sudo apt install -y pixiewps
- ```
- 
-***Other versions***
- ```
- sudo apt install -y build-essential unzip
- wget https://github.com/wiire-a/pixiewps/archive/master.zip && unzip master.zip
- cd pixiewps*/
- make
- sudo make install
- ```
-**Getting OneShot**
- ```
- cd ~
- wget https://raw.githubusercontent.com/drygdryg/OneShot/master/oneshot.py
- ```
-Optional: getting a list of vulnerable to pixie dust devices for highlighting in scan results:
- ```
- wget https://raw.githubusercontent.com/drygdryg/OneShot/master/vulnwsc.txt
- ```
-## Arch Linux
-**Installing requirements**
- ```
- sudo pacman -S wpa_supplicant pixiewps wget python
- ```
-**Getting OneShot**
- ```
- wget https://raw.githubusercontent.com/drygdryg/OneShot/master/oneshot.py
- ```
-Optional: getting a list of vulnerable to pixie dust devices for highlighting in scan results:
- ```
- wget https://raw.githubusercontent.com/drygdryg/OneShot/master/vulnwsc.txt
- ```
-## Alpine Linux
-It can also be used to run on Android devices using [Linux Deploy](https://play.google.com/store/apps/details?id=ru.meefik.linuxdeploy)
-
-**Installing requirements**  
-Adding the testing repository:
- ```
- sudo sh -c 'echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing/" >> /etc/apk/repositories'
- ```
- ```
- sudo apk add python3 wpa_supplicant pixiewps iw
- ```
- **Getting OneShot**
- ```
- sudo wget https://raw.githubusercontent.com/drygdryg/OneShot/master/oneshot.py
- ```
-Optional: getting a list of vulnerable to pixie dust devices for highlighting in scan results:
- ```
- sudo wget https://raw.githubusercontent.com/drygdryg/OneShot/master/vulnwsc.txt
  ```
 ## [Termux](https://termux.com/)
 Please note that root access is required.  
 
-#### Using installer
- ```
- curl -sSf https://raw.githubusercontent.com/drygdryg/OneShot_Termux_installer/master/installer.sh | bash
  ```
 #### Manually
 **Installing requirements**
  ```
- pkg install -y root-repo
- pkg install -y git tsu python wpa-supplicant pixiewps iw openssl
+ pkg install root-repo  -y
+
+ pkg install git sudo python wpa-supplicant pixiewps iw openssl -y
+
+sudo pip install wcwidth
+
  ```
 **Getting OneShot**
  ```
- git clone --depth 1 https://github.com/drygdryg/OneShot OneShot
+ git clone --depth 1 https://github.com/TasnimulHasan0/OneShot
  ```
 #### Running
  ```
